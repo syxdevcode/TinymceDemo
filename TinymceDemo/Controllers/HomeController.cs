@@ -38,7 +38,7 @@ namespace TinymceDemo.Controllers
         /// <returns></returns>
         public ActionResult Test(TinyMCEModels model)
         {
-            var path = Server.MapPath("~/File/123.txt");
+            var path = Server.MapPath("~/File/Test.txt");
             var str = System.IO.File.ReadAllText(path);
             if (System.IO.File.Exists(path))
             {
@@ -56,7 +56,7 @@ namespace TinymceDemo.Controllers
         /// <returns></returns>
         public ActionResult Show()
         {
-            var str = System.IO.File.ReadAllText(Server.MapPath("~/File/123.txt"));
+            var str = System.IO.File.ReadAllText(Server.MapPath("~/File/Test.txt"));
             ViewBag.str = str.Trim();
             return View();
         }
